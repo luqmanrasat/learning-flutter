@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
-import 'fooderlich_theme.dart';
+
+import '../fooderlich_theme.dart';
+import '../models/models.dart';
 import 'author_card.dart';
 
 class Card2 extends StatelessWidget {
-  const Card2({Key? key}) : super(key: key);
+  final ExploreRecipe recipe;
+
+  const Card2({
+    Key? key,
+    required this.recipe,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,17 +20,19 @@ class Card2 extends StatelessWidget {
           width: 350,
           height: 450,
         ),
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/mag5.png'), fit: BoxFit.cover),
-          borderRadius: BorderRadius.all(Radius.circular(10.0)),
+            image: AssetImage(recipe.backgroundImage),
+            fit: BoxFit.cover,
+          ),
+          borderRadius: const BorderRadius.all(Radius.circular(10.0)),
         ),
         child: Column(
           children: [
-            const AuthorCard(
-              authorName: 'Mike Katz',
-              title: 'Smoothie Connoisseur',
-              imageProvider: AssetImage('assets/author_katz.jpeg'),
+            AuthorCard(
+              authorName: recipe.authorName,
+              title: recipe.role,
+              imageProvider: AssetImage(recipe.profileImage),
             ),
             Expanded(
               child: Stack(
@@ -32,7 +41,7 @@ class Card2 extends StatelessWidget {
                     bottom: 16,
                     right: 16,
                     child: Text(
-                      'Recipe',
+                      recipe.title,
                       style: FooderlichTheme.lightTextTheme.headline1,
                     ),
                   ),
@@ -40,9 +49,9 @@ class Card2 extends StatelessWidget {
                     bottom: 70,
                     left: 16,
                     child: RotatedBox(
-                      quarterTurns: 1,
+                      quarterTurns: 3,
                       child: Text(
-                        'Smoothies',
+                        recipe.subtitle,
                         style: FooderlichTheme.lightTextTheme.headline1,
                       ),
                     ),
