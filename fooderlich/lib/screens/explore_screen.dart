@@ -27,7 +27,6 @@ class _ExploreScreenState extends State<ExploreScreen> {
     return FutureBuilder(
       future: mockService.getExploreData(),
       builder: (context, AsyncSnapshot<ExploreData> snapshot) {
-        // TODO Add Nested List Views
         if (snapshot.connectionState == ConnectionState.done) {
           return ListView(
             controller: _controller,
