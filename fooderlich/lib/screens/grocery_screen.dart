@@ -1,3 +1,5 @@
+import 'empty_grocery_screen.dart';
+
 import 'package:flutter/material.dart';
 
 class GroceryScreen extends StatelessWidget {
@@ -5,8 +7,8 @@ class GroceryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: Replace with EmptyGroceryScreen
-    return Container(color: Colors.green);
+    // TODO: Add a scaffold widget
+    return const EmptyGroceryScreen();
   }
   // TODO: Add buildGroceryScreen
 }
