@@ -7,8 +7,8 @@ import 'package:uuid/uuid.dart';
 import '../models/models.dart';
 
 class GroceryItemScreen extends StatefulWidget {
-  final Function(GroceryManager) onCreate;
-  final Function(GroceryManager) onUpdate;
+  final Function(GroceryItem) onCreate;
+  final Function(GroceryItem) onUpdate;
   final GroceryItem? originalItem;
   final bool isUpdating;
 
