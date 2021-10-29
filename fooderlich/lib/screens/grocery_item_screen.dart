@@ -139,7 +139,7 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
           spacing: 10.0,
           children: [
             ChoiceChip(
-              selectedColor: Colors.black,
+              selectedColor: _currentColor,
               selected: _importance == Importance.low,
               label: const Text(
                 'low',
@@ -150,7 +150,7 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
               },
             ),
             ChoiceChip(
-              selectedColor: Colors.black,
+              selectedColor: _currentColor,
               selected: _importance == Importance.medium,
               label: const Text(
                 'medium',
@@ -161,7 +161,7 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
               },
             ),
             ChoiceChip(
-              selectedColor: Colors.black,
+              selectedColor: _currentColor,
               selected: _importance == Importance.high,
               label: const Text(
                 'high',
