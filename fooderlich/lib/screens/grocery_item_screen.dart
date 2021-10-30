@@ -51,9 +51,9 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
       setState(() {
         _name = _nameController.text;
       });
-
-      super.initState();
     });
+
+    super.initState();
   }
 
   @override
