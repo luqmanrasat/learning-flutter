@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/components.dart';
 import '../models/models.dart';
-import 'components.dart';
 
 class FriendPostListView extends StatelessWidget {
   final List<Post> friendPosts;
@@ -23,7 +23,7 @@ class FriendPostListView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Social Chefs 👩‍',
+            'Social Chefs 👩‍🍳',
             style: Theme.of(context).textTheme.headline1,
           ),
           const SizedBox(height: 16),
